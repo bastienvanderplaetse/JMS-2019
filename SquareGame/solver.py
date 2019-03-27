@@ -31,9 +31,9 @@ class SquareApp(App):
             while True:
                 output, score = self.evaluate_generation()
                 self.update_grid(output)
-                if score == 9:
+                if score == 25:
                     break
-                if score == 7:
+                if score == 17:
                     break
 
         return True
