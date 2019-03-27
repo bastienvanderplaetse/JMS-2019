@@ -8,6 +8,7 @@ from kivy.core.window import Window
 from neuroevolution import NEAT
 from copy import deepcopy
 import numpy as np
+import time
 
 class SquareApp(App):
     def __init__(self, filename):
@@ -30,7 +31,9 @@ class SquareApp(App):
             while True:
                 output, score = self.evaluate_generation()
                 self.update_grid(output)
-                if score == 25:
+                if score == 9:
+                    break
+                if score == 7:
                     break
 
         return True
